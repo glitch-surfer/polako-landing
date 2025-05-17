@@ -363,6 +363,95 @@ header nav {
   color: black;
 }
 
+/* Hero Section */
+.hero {
+  padding: 30px; /* Top and bottom spacing */
+  text-align: center; /* Center-align content */
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(254, 205, 112); /* Light yellow background */
+  max-width: 1200px; /* Limit the width */
+  margin: 0 auto; /* Center the container */
+  border-radius: 50px;
+}
+
+.hero-text-content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0 40px 100px;
+
+
+  ul {
+    text-align: left;
+    padding-left: 15px;
+  }
+}
+
+.hero-image {
+  padding-right: 100px;
+}
+
+@media (max-width: 1060px) {
+  .hero-image {
+    display: none;
+  }
+
+  .hero-container {
+    justify-content: center;
+  }
+
+  .hero-text-content {
+    padding: 40px;
+  }
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #333; /* Dark text color */
+}
+
+.hero p {
+  font-size: 1.25rem; /* Slightly larger text for emphasis */
+  color: #555; /* Medium-dark text color */
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px; /* Button padding */
+  background-color: #000; /* Black button */
+  text-decoration: none; /* Remove underline */
+  color: rgb(254, 205, 112);
+  font-size: 1rem; /* Font size for button text */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.cta-button:hover {
+  background-color: #333; /* Dark hover effect */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .hero p {
+    font-size: 1.5rem; /* Larger text size for bigger screens */
+  }
+
+  .cta-button {
+    font-size: 1.2rem; /* Slightly larger button text */
+    padding: 20px 40px; /* Larger button for bigger screens */
+  }
+}
+
 /* About Us Section */
 .about-us {
   padding: 50px 20px;
