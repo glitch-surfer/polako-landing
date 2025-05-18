@@ -1,57 +1,14 @@
-/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
+::-moz-selection,
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
 }
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
 
 audio,
 canvas,
@@ -61,50 +18,6 @@ svg,
 video {
   vertical-align: middle;
 }
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
 
 .visually-hidden {
   border: 0;
@@ -116,14 +29,7 @@ textarea {
   position: absolute;
   white-space: nowrap;
   width: 1px;
-  /* 1 */
 }
-
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
 
 .visually-hidden.focusable:active,
 .visually-hidden.focusable:focus {
@@ -136,61 +42,12 @@ textarea {
   width: auto;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
 @media print {
   *,
   *::before,
   *::after {
     background: #fff !important;
     color: #000 !important;
-    /* Black prints faster */
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -208,10 +65,6 @@ textarea {
     content: " (" attr(title) ")";
   }
 
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
   a[href^="#"]::after,
   a[href^="javascript:"]::after {
     content: "";
@@ -262,13 +115,20 @@ header {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  background-color: white;
+  background-color: #fff;
   padding: 1.25rem 1rem;
+  gap: 1rem;
+}
+
+@media (max-width: 585px) {
+  header {
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+  }
 }
 
 @media (min-width: 768px) {
   header {
-    gap: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
@@ -281,7 +141,6 @@ header {
   }
 }
 
-/* Logo styles */
 header img {
   cursor: pointer;
 }
@@ -297,30 +156,13 @@ header img.small {
   display: none;
 }
 
-@media (max-width: 540px) {
-  header img.big {
-    display: none;
-  }
-
-  header img.small {
-    display: block;
-  }
-}
-
-/* Navigation styles */
-header div {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
 header nav {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-left: auto;
 }
 
-/* Icon general styles */
 .icon {
   display: inline-block;
   background-size: cover;
@@ -328,7 +170,6 @@ header nav {
   width: 24px;
 }
 
-/* Social media icon backgrounds */
 .bg-telegram {
   background-image: url('./assets/icons/telegram-icon.svg');
 }
@@ -349,8 +190,22 @@ header nav {
   background-image: url('./assets/icons/whatsapp-icon.svg');
 }
 
-.bg-extend {
-  background-image: url('./assets/icons/extend-icon.svg');
+.srb-icon {
+  background-image: url('./assets/icons/language-icon-sr.svg');
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.ru-icon {
+  background-image: url('./assets/icons/language-icon-ru.svg');
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.eng-icon {
+  background-image: url('./assets/icons/language-icon-en.svg');
+  border: 1px solid #000;
+  border-radius: 50%;
 }
 
 .login-btn {
@@ -360,26 +215,51 @@ header nav {
   background-color: transparent;
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: #000;
+}
+
+@media (max-width: 540px) {
+  header img.big {
+    display: none;
+  }
+
+  header img.small {
+    display: block;
+  }
 }
 
 /* Hero Section */
 .hero {
-  padding: 30px; /* Top and bottom spacing */
-  text-align: center; /* Center-align content */
+  padding: 30px;
+  text-align: center;
+}
 
-  h1 {
-    margin-top: 0;
+.hero h1 {
+  margin-top: 0;
+  font-size: 3rem;
+  margin: 0;
+  color: #333;
+}
+
+@media (max-width: 520px) {
+  .hero h1 {
+    font-size: 2rem;
   }
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 30px;
 }
 
 .hero-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(254, 205, 112); /* Light yellow background */
-  max-width: 1200px; /* Limit the width */
-  margin: 0 auto; /* Center the container */
+  background-color: rgb(254, 205, 112);
+  max-width: 1200px;
+  margin: 0 auto;
   border-radius: 50px;
 }
 
@@ -387,12 +267,11 @@ header nav {
   display: flex;
   flex-direction: column;
   padding: 40px 0 40px 100px;
+}
 
-
-  ul {
-    text-align: left;
-    padding-left: 15px;
-  }
+.hero-text-content ul {
+  text-align: left;
+  padding-left: 15px;
 }
 
 .hero-image {
@@ -413,61 +292,37 @@ header nav {
   }
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin: 0;
-  color: #333; /* Dark text color */
-}
-
-@media (max-width: 520px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-}
-
-.hero p {
-  font-size: 1.25rem; /* Slightly larger text for emphasis */
-  color: #555; /* Medium-dark text color */
-  margin-bottom: 30px;
-}
-
 .cta-button {
   display: inline-block;
-  padding: 15px 30px; /* Button padding */
-  background-color: #000; /* Black button */
-  text-decoration: none; /* Remove underline */
+  padding: 15px 30px;
+  background-color: #000;
+  text-decoration: none;
   color: rgb(254, 205, 112);
-  font-size: 1rem; /* Font size for button text */
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #333; /* Dark hover effect */
+  background-color: #333;
 }
 
-/* Responsive Design */
 @media (min-width: 768px) {
   .hero p {
-    font-size: 1.5rem; /* Larger text size for bigger screens */
+    font-size: 1.5rem;
   }
 
   .cta-button {
-    font-size: 1.2rem; /* Slightly larger button text */
-    padding: 20px 40px; /* Larger button for bigger screens */
+    font-size: 1.2rem;
+    padding: 20px 40px;
   }
 }
 
 /* About Us Section */
 .about-us {
   padding: 50px 20px;
-  background-color: #f9f9f9; /* Light background for contrast */
-}
-
-.about-us-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center; /* Center-align text */
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
 .about-us h2 {
@@ -481,26 +336,41 @@ header nav {
   line-height: 1.6;
   color: #555;
   margin: 0 auto;
-  max-width: 800px; /* Limit the width for better readability */
+  max-width: 800px;
+}
+
+a, a strong {
+  text-decoration: none;
+  color: #000;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.about-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* How We Work Section */
 .how-we-work {
   padding: 50px 20px;
-  background-color: #ffffff; /* White background for a clean look */
+  background-color: #fff;
 }
 
 .how-we-work-container {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-  gap: 20px; /* Add spacing between text and image */
-  align-items: center; /* Vertically align text and image */
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
   max-width: 1200px;
-  margin: 0 auto; /* Center the section */
+  margin: 0 auto;
 }
 
 .how-we-work-text {
-  flex: 1; /* Allow text to take up equal space */
+  flex: 1;
   min-width: 280px;
 }
 
@@ -511,7 +381,7 @@ header nav {
 }
 
 .how-we-work-text ul {
-  list-style-type: disc; /* Use bullets for the list */
+  list-style: disc;
   padding-left: 20px;
   font-size: 1.125rem;
   line-height: 1.6;
@@ -519,50 +389,48 @@ header nav {
 }
 
 .how-we-work-image {
-  flex: 1; /* Allow image to take up equal space */
+  flex: 1;
   min-width: 280px;
-  text-align: center; /* Center the placeholder image for smaller screens */
+  text-align: center;
 }
 
 .how-we-work-image img {
   width: 100%;
-  max-width: 400px; /* Limit the maximum width of the image */
-  height: auto; /* Maintain the aspect ratio */
+  max-width: 400px;
+  height: auto;
 }
 
-/* Responsive Design */
 @media (min-width: 768px) {
   .how-we-work-container {
-    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+    flex-wrap: nowrap;
   }
 
   .how-we-work-text ul {
-    font-size: 1rem; /* Slightly smaller font on larger screens for balance */
+    font-size: 1rem;
   }
 }
 
 /* Benefits Section */
 .benefits {
   padding: 50px 20px;
-  background-color: #f9f9f9; /* Slightly gray background for visual separation */
+  background-color: #f9f9f9;
+  text-align: center;
+}
 
-  h2 {
-    font-size: 2rem;
-    color: #333;
-    margin: 0;
-    text-align: center;
-  }
+.benefits h2 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
 }
 
 .benefits-container {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Add spacing between text and image */
-  align-items: center; /* Vertically align items */
+  gap: 20px;
+  align-items: center;
   max-width: 1200px;
-  margin: 0 auto; /* Center the section */
-
+  margin: 0 auto;
 }
 
 .benefits-text {
@@ -570,65 +438,60 @@ header nav {
 }
 
 .benefits-text ul {
-  list-style-type: disc; /* Bullets for the list */
-  padding-left: 20px; /* Indent the list for readability */
+  list-style: disc;
+  padding-left: 20px;
   font-size: 1.125rem;
   line-height: 1.6;
   color: #555;
   max-width: fit-content;
+}
 
-  li {
-    max-width: fit-content;
-  }
+.benefits-text li {
+  max-width: fit-content;
 }
 
 .benefits-image {
   min-width: 280px;
-  text-align: center; /* Center the image for smaller screens */
+  text-align: center;
 }
 
 .benefits-image img {
   width: 100%;
-  max-width: 400px; /* Limit the image width */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 400px;
+  height: auto;
 }
 
-/* Responsive Design */
 @media (min-width: 768px) {
   .benefits-container {
-    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
-
+    flex-wrap: nowrap;
   }
 
-  .benefits {
-    h2 {
-      padding-right: 300px;
-    }
-
+  .benefits h2 {
+    padding-right: 300px;
   }
 
   .benefits-text ul {
-    font-size: 1rem; /* Slightly smaller font for balance on larger screens */
+    font-size: 1rem;
   }
 }
 
 /* Analytics Section */
 .analytics {
   padding: 50px 20px;
-  background-color: #ffffff; /* White background for a clean look */
+  background-color: #fff;
 }
 
 .analytics-container {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-  gap: 20px; /* Add spacing between text and image */
-  align-items: center; /* Vertically align items */
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
   max-width: 1200px;
-  margin: 0 auto; /* Center the section */
+  margin: 0 auto;
 }
 
 .analytics-text {
-  flex: 1; /* Allow text to take equal space */
+  flex: 1;
   min-width: 280px;
 }
 
@@ -639,71 +502,77 @@ header nav {
 }
 
 .analytics-text ul {
-  list-style-type: disc; /* Bulleted list */
-  padding-left: 20px; /* Indent for readability */
+  list-style: disc;
+  padding-left: 20px;
   font-size: 1.125rem;
   line-height: 1.6;
   color: #555;
 }
 
 .analytics-image {
-  flex: 1; /* Allow image to take equal space */
+  padding-left: 60px;
+  flex: 1;
   min-width: 280px;
-  text-align: center; /* Center image for smaller screens */
+  text-align: center;
 }
 
 .analytics-image img {
   width: 100%;
-  max-width: 400px; /* Limit the image width */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 400px;
+  height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design */
 @media (min-width: 768px) {
   .analytics-container {
-    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+    flex-wrap: nowrap;
   }
 
   .analytics-text ul {
-    font-size: 1rem; /* Slightly smaller font for balance */
+    font-size: 1rem;
   }
 }
 
 /* Footer Section */
 .footer {
   padding: 50px 20px;
-  background-color: #333; /* Dark background for contrast */
-  color: #fff; /* White text for readability */
-  text-align: center; /* Center-align content */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
 }
 
 .footer-container {
   max-width: 1200px;
-  margin: 0 auto; /* Center the footer content */
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .footer-content h2 {
-  font-size: 1.75rem; /* Slightly smaller heading size */
+  font-size: 1.75rem;
   margin: 0 0 20px 0;
 }
 
 .footer-content p {
-  font-size: 1.125rem; /* Standard readable text size */
+  font-size: 1.125rem;
   line-height: 1.6;
   margin: 10px 0;
 }
 
 .footer-content a {
-  color: #ffd966; /* Light yellow for links */
-  text-decoration: none; /* Remove underline from links */
+  color: #ffd966;
+  text-decoration: none;
   font-weight: bold;
 }
 
 .footer-content a:hover {
-  text-decoration: underline; /* Add underline on hover for accessibility */
+  text-decoration: underline;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
 }
