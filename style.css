@@ -576,3 +576,20 @@ a, a strong {
   left: -9999px;
   top: -9999px;
 }
+
+@media (max-width: 768px) {
+  .how-we-work-container,
+  .analytics-container {
+    flex-direction: column;
+  }
+
+  .how-we-work-image,
+  .analytics-image {
+    order: 2; /* Move images below */
+  }
+
+  .how-we-work-text,
+  .analytics-text {
+    order: 1; /* Move text above */
+  }
+}
