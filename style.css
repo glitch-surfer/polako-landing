@@ -512,10 +512,15 @@ a, a strong {
 }
 
 .analytics-image {
-  padding-left: 60px;
   flex: 1;
   min-width: 280px;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .analytics-image {
+    padding-left: 60px;
+  }
 }
 
 .analytics-image img {
