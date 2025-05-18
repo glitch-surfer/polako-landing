@@ -118,6 +118,8 @@ header {
   background-color: #fff;
   padding: 1.25rem 1rem;
   gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 @media (max-width: 585px) {
@@ -569,12 +571,6 @@ a, a strong {
 
 .footer-content a:hover {
   text-decoration: underline;
-}
-
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
 }
 
 @media (max-width: 768px) {
