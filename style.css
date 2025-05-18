@@ -419,6 +419,12 @@ header nav {
   color: #333; /* Dark text color */
 }
 
+@media (max-width: 520px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
 .hero p {
   font-size: 1.25rem; /* Slightly larger text for emphasis */
   color: #555; /* Medium-dark text color */
@@ -476,4 +482,228 @@ header nav {
   color: #555;
   margin: 0 auto;
   max-width: 800px; /* Limit the width for better readability */
+}
+
+/* How We Work Section */
+.how-we-work {
+  padding: 50px 20px;
+  background-color: #ffffff; /* White background for a clean look */
+}
+
+.how-we-work-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 20px; /* Add spacing between text and image */
+  align-items: center; /* Vertically align text and image */
+  max-width: 1200px;
+  margin: 0 auto; /* Center the section */
+}
+
+.how-we-work-text {
+  flex: 1; /* Allow text to take up equal space */
+  min-width: 280px;
+}
+
+.how-we-work-text h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.how-we-work-text ul {
+  list-style-type: disc; /* Use bullets for the list */
+  padding-left: 20px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.how-we-work-image {
+  flex: 1; /* Allow image to take up equal space */
+  min-width: 280px;
+  text-align: center; /* Center the placeholder image for smaller screens */
+}
+
+.how-we-work-image img {
+  width: 100%;
+  max-width: 400px; /* Limit the maximum width of the image */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .how-we-work-container {
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+  }
+
+  .how-we-work-text ul {
+    font-size: 1rem; /* Slightly smaller font on larger screens for balance */
+  }
+}
+
+/* Benefits Section */
+.benefits {
+  padding: 50px 20px;
+  background-color: #f9f9f9; /* Slightly gray background for visual separation */
+
+  h2 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.benefits-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: center;
+  gap: 20px; /* Add spacing between text and image */
+  align-items: center; /* Vertically align items */
+  max-width: 1200px;
+  margin: 0 auto; /* Center the section */
+
+}
+
+.benefits-text {
+  min-width: 280px;
+}
+
+.benefits-text ul {
+  list-style-type: disc; /* Bullets for the list */
+  padding-left: 20px; /* Indent the list for readability */
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: fit-content;
+
+  li {
+    max-width: fit-content;
+  }
+}
+
+.benefits-image {
+  min-width: 280px;
+  text-align: center; /* Center the image for smaller screens */
+}
+
+.benefits-image img {
+  width: 100%;
+  max-width: 400px; /* Limit the image width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .benefits-container {
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+
+  }
+
+  .benefits {
+    h2 {
+      padding-right: 300px;
+    }
+
+  }
+
+  .benefits-text ul {
+    font-size: 1rem; /* Slightly smaller font for balance on larger screens */
+  }
+}
+
+/* Analytics Section */
+.analytics {
+  padding: 50px 20px;
+  background-color: #ffffff; /* White background for a clean look */
+}
+
+.analytics-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 20px; /* Add spacing between text and image */
+  align-items: center; /* Vertically align items */
+  max-width: 1200px;
+  margin: 0 auto; /* Center the section */
+}
+
+.analytics-text {
+  flex: 1; /* Allow text to take equal space */
+  min-width: 280px;
+}
+
+.analytics-text h2 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+}
+
+.analytics-text ul {
+  list-style-type: disc; /* Bulleted list */
+  padding-left: 20px; /* Indent for readability */
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.analytics-image {
+  flex: 1; /* Allow image to take equal space */
+  min-width: 280px;
+  text-align: center; /* Center image for smaller screens */
+}
+
+.analytics-image img {
+  width: 100%;
+  max-width: 400px; /* Limit the image width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .analytics-container {
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+  }
+
+  .analytics-text ul {
+    font-size: 1rem; /* Slightly smaller font for balance */
+  }
+}
+
+/* Footer Section */
+.footer {
+  padding: 50px 20px;
+  background-color: #333; /* Dark background for contrast */
+  color: #fff; /* White text for readability */
+  text-align: center; /* Center-align content */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto; /* Center the footer content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content h2 {
+  font-size: 1.75rem; /* Slightly smaller heading size */
+  margin: 0 0 20px 0;
+}
+
+.footer-content p {
+  font-size: 1.125rem; /* Standard readable text size */
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.footer-content a {
+  color: #ffd966; /* Light yellow for links */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: bold;
+}
+
+.footer-content a:hover {
+  text-decoration: underline; /* Add underline on hover for accessibility */
 }
